@@ -1,0 +1,57 @@
+<?php /** @var \Perspective\SalesEndTime\Block\Index $block */
+?>
+<?php
+if (0){
+$dateRules = $block->getCurrectProductRules();
+$dateSpecial = $block->getDatePrice();
+$allRules = $block->getCatalogRulePrices();
+if ($dateSpecial != '' && $dateRules != '') {
+    if ($allRules){
+        echo "Список всех правил: ";
+        foreach ($allRules as $allRule){
+            ?> <p><?php echo "Имя: "?> <b><?=$allRule['name']?></b> <?=" заканчивается "?> <b> <?=$allRule['date'];?></b></p><?php
+        }
+    }?>
+
+    <?php
+    if ($dateRules[0] >= $dateSpecial[0]) {
+        $endConvert = substr(str_replace("-", "/", $dateSpecial[0]), 0, 10);?>
+        <b><?= $dateSpecial[1]; ?></b>
+        <?php
+    } else {
+        $endConvert = substr(str_replace("-", "/", $dateRules[0]), 0, 10);?>
+        <b><?= $dateRules[1]; ?></b>
+        <?php
+    }
+}elseif ($dateRules == ''){
+    $endConvert = substr(str_replace("-", "/", $dateSpecial[0]), 0, 10);?>
+     <b><?= $dateSpecial[1]; ?></b>
+    <?php
+}else{
+    $endConvert = substr(str_replace("-", "/", $dateRules[0]), 0, 10);?>
+    <b><?= $dateRules[1]; ?></b>
+    <?php
+}
+if (isset($endConvert)){
+?>
+<div id="getting-started"></div>
+    <b>
+<script type="text/javascript">
+    require([
+        'jquery',
+        'countdown'
+    ], function (
+        $, countdown
+    ) {
+        jQuery("#getting-started")
+            .countdown("<?= $endConvert?>", function(event) {
+                jQuery(this).text(
+                    event.strftime('%D Дней %H Часов %M Минут %S Секунд')
+                );
+            });
+    });
+</script>
+    </b>
+<?php
+}
+}

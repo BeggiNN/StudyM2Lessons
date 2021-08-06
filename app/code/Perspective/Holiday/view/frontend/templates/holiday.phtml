@@ -1,0 +1,31 @@
+<?php /** @var \Perspective\Holiday\Block\Holiday $block */ ?>
+<?php
+
+$holidays = $block->getHoliday();
+$discount = $block->getPercent();
+if ($holidays[1]){
+foreach ($holidays[0] as $item) {
+    $status = $item->getStatus();
+    if ($status != 2) {
+    $today = date("Y-m-d");
+    $finish = $item->getFinish();
+    $day = $item->getDay();
+    $start = $item->getStart();
+    ?>
+        <div style="text-align: center">
+        <?php if ($start <= $today && $finish >= $today){?>
+             <?php  echo $item->getText();
+            if ($start <= $today && $day >= $today) {?>
+                <p>   <?= "В честь празничого периода скидка $discount%";?></p><?php
+            } elseif ($day <= $today && $finish >= $today) {?>
+               <p> <?= "В честь празничого периода скидка " . $discount / 2 . "%";?></p>
+                <?php
+            }
+        }
+        ?>
+        </div>
+        </ br>
+        <?php
+     }
+   }
+}

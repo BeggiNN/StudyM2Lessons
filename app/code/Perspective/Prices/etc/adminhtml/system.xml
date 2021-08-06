@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="settings" translate="label" sortOrder="10">
+            <label>Perspective</label>
+        </tab>
+        <section id="showPrices" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1">
+            <class>separator-top</class>
+            <label>Show Prices</label>
+            <tab>settings</tab>
+            <resource>Perspective_Prices::price_configuration</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Set Prices</label>
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1"  showInWebsite="0" showInStore="0">
+                    <label>Module Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="base_price" translate="label" type="select" sortOrder="1" showInDefault="1"  showInWebsite="0" showInStore="0">
+                    <label>Base price show</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="final_price" translate="label" type="select" sortOrder="1" showInDefault="1"  showInWebsite="0" showInStore="0">
+                    <label>Final price show</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="special_price" translate="label" type="select" sortOrder="1" showInDefault="1"  showInWebsite="0" showInStore="0">
+                    <label>Special price show</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="tier_price" translate="label" type="select" sortOrder="1" showInDefault="1"  showInWebsite="0" showInStore="0">
+                    <label>Tier price show</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="catalog_rule_price" translate="label" type="select" sortOrder="1" showInDefault="1"  showInWebsite="0" showInStore="0">
+                    <label>Catalog rule price show</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

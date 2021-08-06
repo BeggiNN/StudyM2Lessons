@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <default>
+        <payment>
+            <perspective_payment>
+                <payment_action>authorize</payment_action> <!-- You can use another method -->
+                <model>Perspective\Payment\Model\PaymentMethod</model>
+                <active>1</active>
+                <title>Perspective Payment</title>
+                <order_status>pending_payment</order_status><!-- set default order status-->
+            </perspective_payment>
+        </payment>
+    </default>
+</config>

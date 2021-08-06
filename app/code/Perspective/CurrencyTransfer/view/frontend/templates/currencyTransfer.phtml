@@ -1,0 +1,16 @@
+<?php /** @var \Perspective\CurrencyTransfer\Block\Custom $block*/?>
+
+<?php
+$arrUAH = $block->getInfoCourse("UAH", "UAHCourse");
+$arrEUR = $block->getInfoCourse("EUR", "EURCourse");
+$arrRUB = $block->getInfoCourse("RUB", "RUBCourse");
+
+if ($arrUAH[0]) {
+    echo "Гривня: " . $arrUAH[1] ?> <br><?php ;
+}
+if ($arrEUR[0]) {
+    echo "Евро: " . $arrEUR[1] ?> <br><?php ;
+}
+if ($arrRUB[0]) {
+    echo "Рубль: " . $arrRUB[1] ?> <br><?php ;
+}

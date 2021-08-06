@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Perspective_CurrencyTransfer::courseproduct" title="Set Course Product" module="Perspective_CurrencyTransfer" sortOrder="50" resource="Perspective_CurrencyTransfer::courseproduct"/>
+        <add id="Perspective_CurrencyTransfer::settings" title="Course Price" module="Perspective_CurrencyTransfer" sortOrder="10" action="adminhtml/system_config/edit/section/setCourse" resource="Perspective_CurrencyTransfer::settings" parent="Perspective_CurrencyTransfer::courseproduct"/>
+    </menu>
+</config>

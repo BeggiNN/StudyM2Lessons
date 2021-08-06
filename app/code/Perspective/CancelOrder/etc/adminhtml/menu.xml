@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Perspective_CancelOrder::cancel_order"
+             title="Cancel Order"
+             module="Perspective_CancelOrder"
+             parent="Magento_Sales::sales_operation"
+             action="cancel_order/holiday/index"
+             sortOrder="100"
+             resource="Perspective_CancelOrder::cancel_order"
+        />
+    </menu>
+</config>

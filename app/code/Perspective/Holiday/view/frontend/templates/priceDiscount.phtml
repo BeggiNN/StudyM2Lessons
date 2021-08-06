@@ -1,0 +1,32 @@
+<?php /** @var \Perspective\Holiday\Block\Holiday $block */ ?>
+<?php
+$attr = $block->getAttributes();
+$discount = $block->getPercent();
+$holidays = $block->getHoliday();
+$price = $block->getPriceProduct();
+$double = $discount/2;
+if ($holidays[1]){
+    if ($attr == 1){
+foreach ($holidays[0] as $item) {
+$status = $item->getStatus();
+if ($status != 2) {
+$today = date("Y-m-d");
+$finish = $item->getFinish();
+$day = $item->getDay();
+$start = $item->getStart();
+?>
+
+    <?php if ($start <= $today && $finish >= $today) if ($start <= $today && $day >= $today) {
+        ?>
+        <p><b>  <?= "Цена со скидкой " . $discount . "% " . $price * ((100 - $discount) / 100); break; ?></b> </p><?php
+    } elseif ($day <= $today && $finish >= $today) { ?>
+
+        <p><b>  <?= "Цена со скидкой " . $double . "% " . $price * ((100 - $double) / 100); break; ?></b></p>
+        <?php
+            }
+    }
+  }
+ }else{
+        echo '';
+    }
+}

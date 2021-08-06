@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Perspective_Holiday::holiday" title="Perspective" module="Perspective_Holiday" sortOrder="51" resource="Perspective_Holiday::holiday"/>
+        <add id="Perspective_Holiday::days" title="Holidays" module="Perspective_Holiday" sortOrder="10" action="perspective_holiday/holiday/index" resource="Perspective_Holiday::days" parent="Perspective_Holiday::holiday"/>
+        <add id="Perspective_Holiday::holiday_configuration" title="Configuration" module="Perspective_Holiday" sortOrder="99" parent="Perspective_Holiday::holiday" action="adminhtml/system_config/edit/section/holiday" resource="Perspective_Holiday::holiday_configuration"/>
+    </menu>
+</config>

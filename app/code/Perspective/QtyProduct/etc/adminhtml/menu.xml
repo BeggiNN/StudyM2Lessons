@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Perspective_QtyProduct::qtyproduct" title="SetQty" module="Perspective_QtyProduct" sortOrder="50" resource="Perspective_QtyProduct::qtyproduct"/>
+        <add id="Perspective_QtyProduct::settings" title="Qty count" module="Perspective_QtyProduct" sortOrder="10" action="adminhtml/system_config/edit/section/setQty" resource="Perspective_QtyProduct::settings" parent="Perspective_QtyProduct::qtyproduct"/>
+    </menu>
+</config>

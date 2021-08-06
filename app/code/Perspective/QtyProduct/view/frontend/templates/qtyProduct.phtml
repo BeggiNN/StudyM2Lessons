@@ -1,0 +1,13 @@
+<?php /** @var \Perspective\QtyProduct\Block\Custom $block*/?>
+
+<?php
+
+$arr = $block->getInfoQty('perspective', 'enable');
+$enable = $arr[1];
+if ($enable){
+    $value = $arr[2];
+    $qty = $arr[0];
+    if ($value > $qty){
+        echo "<h2>Осталось: $qty</h2>";
+    }
+}
