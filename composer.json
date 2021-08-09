@@ -11,6 +11,8 @@
         "sort-packages": true
     },
     "require": {
+        "ext-json": "*",
+        "liqpay/liqpay": "^1.2",
         "magento/module-bundle-sample-data": "100.3.*",
         "magento/module-catalog-rule-sample-data": "100.3.*",
         "magento/module-catalog-sample-data": "100.3.*",
@@ -32,8 +34,7 @@
         "magento/module-wishlist-sample-data": "100.3.*",
         "magento/product-community-edition": "2.3.5",
         "magento/sample-data-media": "100.3.*",
-        "symfony/console": "4.4.26",
-      "ext-json": "*"
+        "symfony/console": "4.4.26"
     },
     "require-dev": {
         "allure-framework/allure-phpunit": "~1.2.0",

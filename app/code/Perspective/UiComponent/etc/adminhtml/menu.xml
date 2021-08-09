@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
-    <menu>
-        <add id="Perspective_UiComponent::ui_component_checkout" title="Check payment and shipping" module="Perspective_UiComponent" sortOrder="50" resource="Perspective_UiComponent::ui_component_checkout"/>
-        <add id="Perspective_UiComponent::settings" title="Ui Component" module="Perspective_UiComponent" sortOrder="10" action="adminhtml/system_config/edit/section/componentUI" resource="Perspective_UiComponent::settings" parent="Perspective_UiComponent::ui_component_checkout"/>
-    </menu>
-</config>
