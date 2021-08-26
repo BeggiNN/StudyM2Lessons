@@ -1,0 +1,76 @@
+<style type="text/css">
+    .citymodal .modal-inner-wrap {
+        width: 400px;
+        height: 230px;
+        margin-left: 60%;
+        border: 1px solid #333;
+        border-radius: 5px;
+        background: #ffffff;
+    }
+    .popuup .modal-inner-wrap {
+        width: 400px;
+        height: 350px;
+    }
+    .modal-popup.modal-slide .modal-footer {
+        border-top: 0px solid #c1c1c1;
+        text-align: right;
+    }
+    .imga {
+        height: 20px;
+    }
+    .ui-helper-hidden-accessible {
+        display: none;
+    }
+    input#city-input {
+        height: 30px;
+        align-content: center;
+        width: 333px;
+    }
+    .autocomplete-results {
+        display: grid;
+        width: 333px;
+    }
+    div#livesearch {
+        border: ridge;
+    }
+
+</style>
+<link rel="stylesheet" href="/resources/demos/style.css">
+<li class="location">
+    <a href ="#" id="button-location" class="button-location" style="text-decoration: none;">
+        <img class="imga" src="http://s1.iconbird.com/ico/2013/12/505/w450h4001385925290Map.png" height="10px" alt="location"/>
+        <span id="my-city"></span>
+    </a>
+</li>
+<div id="what" class="what" hidden="hidden">
+    <h2 style="text-align: center; margin-top: 10px;"><?= $block->escapeHtml(__('Ваше місцезнаходження')) ?></h2>
+    <div class="confirm">
+        <p style="text-align: center" class="location-city"><b>1111</b></p>
+    </div>
+</div>
+<div id="city" class="city" hidden="hidden">
+    <div class="city-form">
+        <h1>Виберіть місто</h1>
+        <form id="control">
+            <input id="city-input" placeholder="Введіть перші 3 букви назви міста" class="input-text" autocomplete="off">
+            <div id="livesearch"></div>
+        </form>
+    </div>
+</div>
+
+<script>
+    require(
+        [
+            'jquery',
+            'jquery/ui',
+            'Magento_Ui/js/modal/modal',
+            'loader'
+        ],
+        function ($) {
+            $(window).on("load", function () {
+                require([
+                    'Perspective_Location/js/location'
+                ]);
+            });
+        })
+</script>
